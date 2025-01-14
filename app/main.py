@@ -10,7 +10,6 @@ class Person:
 def create_person_list(people: list) -> list:
     new_list = [Person(p["name"], p["age"]) for p in people]
     for person in people:
-        print(person)
         persone_instance = Person.people[person["name"]]
         if "wife" in person and person["wife"]:
             persone_instance.wife = Person.people[person["wife"]]
